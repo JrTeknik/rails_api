@@ -41,5 +41,8 @@ module RailsApi
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
+
+    # Rack Attack configuration
+    config.middleware.use Rack::Attack
   end
 end
